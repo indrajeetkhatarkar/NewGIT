@@ -1,0 +1,262 @@
+====================================================
+              GIT + GITHUB BASIC NOTES
+====================================================
+
+
+1) Git Version Check
+--------------------
+
+Command:   git --version
+
+Kaam:
+- Check karta hai Git install hai ya nahi.
+
+
+====================================================
+
+
+2) Folder ko Git Repository Banana
+----------------------------------
+
+Command:  git init
+
+Kaam:
+- Current folder ko Git repository bana deta hai.
+- .git naam ka hidden folder create hota hai.
+- Git project ki history yahi store hoti hai.
+
+
+====================================================
+
+
+3) Git Status Check Karna
+-------------------------
+
+Command: git status
+
+Kaam:    Project ke andar kya change hua hai wo batata hai.
+
+
+====================================================
+
+
+4) New File Create Karna
+------------------------
+
+Command:  touch a1.txt
+
+Kaam:     a1.txt naam ki new empty file create hoti hai.
+
+Check:  git status
+
+Output:
+Untracked files:
+    a1.txt
+
+Meaning:
+- File ban gayi hai lekin Git abhi track nahi kar raha.
+
+
+====================================================
+
+
+5) File ko Staging Area Me Add Karna
+------------------------------------
+
+Command:  git add a1.txt
+
+Kaam:     Git ko bolta hai ki is file ko commit ke liye ready karo.
+
+Check:    git status
+
+Output:
+Changes to be committed:
+    new file: a1.txt
+
+
+====================================================
+
+
+6) Pehla Commit Banana
+----------------------
+
+Command:   git commit -m "Add a1.txt file"
+Kaam:      Changes ko Git history me permanently save karta hai.
+
+
+Meaning:
+
+commit = Save point
+-m = Message
+
+
+====================================================
+
+
+7) GitHub Repository Connect Karna
+----------------------------------
+
+SSH Method (Try kiya tha):
+
+git remote add origin git@github.com:username/repository.git
+
+
+Lekin error:
+
+Permission denied (publickey)
+
+
+Reason:
+- SSH key GitHub ke saath setup nahi thi.
+
+
+====================================================
+
+
+8) HTTPS Method Use Karna
+-------------------------
+
+Old remote remove:
+
+git remote remove origin
+
+
+New HTTPS remote add:
+
+git remote add origin https://github.com/indrajeetkhatarkar/NewGIT.git
+
+
+Check:
+
+git remote -v
+
+
+Output:
+
+origin https://github.com/indrajeetkhatarkar/NewGIT.git
+
+
+====================================================
+
+
+9) Branch Name Change Karna
+---------------------------
+
+Command:
+
+git branch -M main
+
+
+Kaam:
+
+master branch ko main branch me convert karta hai.
+
+
+====================================================
+
+
+10) GitHub Par Code Push Karna
+------------------------------
+
+Command:
+
+git push -u origin main
+
+
+Kaam:
+
+Local computer ka code GitHub par upload karta hai.
+
+
+Meaning:
+
+origin = GitHub repository
+main = branch name
+-u = future push/pull easy banata hai
+
+
+====================================================
+
+
+11) Final Check
+---------------
+
+Command:
+
+git status
+
+
+Output:
+
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+
+Meaning:
+
+- Code GitHub par upload ho chuka hai.
+- Local aur GitHub sync me hain.
+
+
+====================================================
+              COMPLETE GIT FLOW
+====================================================
+
+
+Create File
+     |
+     ↓
+git status
+     |
+     ↓
+git add filename
+     |
+     ↓
+git commit -m "message"
+     |
+     ↓
+git push
+     |
+     ↓
+GitHub
+
+
+====================================================
+              DAILY USE COMMANDS
+====================================================
+
+
+Check Status:
+
+git status
+
+
+Add Files:
+
+git add .
+
+
+Commit:
+
+git commit -m "your message"
+
+
+Upload:
+
+git push
+
+
+Download Latest Code:
+
+git pull
+
+
+See History:
+
+git log
+
+
+====================================================
+              END OF NOTES
+====================================================
