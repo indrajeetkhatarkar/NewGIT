@@ -162,3 +162,169 @@ team members to share, update, and collaborate on the project.
                 │   END    │
                 └──────────┘
 
+
+================================================================================================================================================================
+
+
+              GIT PRACTICAL NOTES
+        (Master Branch Setup Completed)
+
+================================================
+1. Remove Wrong Git Repository
+================================================
+
+Command:
+$ rm -rf .git
+
+Purpose:
+- Old Git repository ko remove karna.
+- Pehle Git galat folder (Home directory) me initialize ho gaya tha.
+
+
+================================================
+2. Create Project Folder
+================================================
+
+Command:
+$ cd Desktop
+
+Purpose:
+- Desktop location par jana.
+
+Command:
+$ mkdir Git-Practical
+
+Purpose:
+- Naya project folder create karna.
+
+Command:
+$ cd Git-Practical
+
+Purpose:
+- Project folder ke andar jana.
+
+
+================================================
+3. Check Current Location
+================================================
+
+Command:
+$ pwd
+
+Output:
+ /c/Users/indra/Desktop/Git-Practical
+
+Purpose:
+- Current working directory check karna.
+
+
+================================================
+4. Initialize Git Repository
+================================================
+
+Command:
+$ git init
+
+Purpose:
+- Current folder ko Git repository banana.
+- .git hidden folder create hota hai.
+
+
+================================================
+5. Create Files
+================================================
+
+Command:
+$ touch a1.txt a2.txt a3.txt a4.txt
+
+Purpose:
+- 4 new text files create karna.
+
+
+================================================
+6. Add Content into Files
+================================================
+
+Commands:
+
+$ echo "Good Morning" > a1.txt
+
+$ echo "Good Afternoon" > a2.txt
+
+$ echo "Good Evening" > a3.txt
+
+$ echo "Good Night" > a4.txt
+
+
+Purpose:
+- Files ke andar content add karna.
+
+
+================================================
+7. Check Created Files
+================================================
+
+Command:
+
+$ ls
+
+Output:
+
+a1.txt
+a2.txt
+a3.txt
+a4.txt
+
+Purpose:
+- Current folder ki files dekhna.
+
+
+================================================
+8. Add Files to Staging Area
+================================================
+
+Command:
+
+$ git add .
+
+Purpose:
+- Saari files ko Git staging area me add karna.
+
+
+================================================
+9. Commit Changes
+================================================
+
+Command:
+
+$ git commit -m "all files added"
+
+Purpose:
+- Changes ka permanent snapshot create karna.
+
+
+================================================
+CURRENT STATUS
+================================================
+
+Branch:
+master
+
+Completed:
+✓ Git Repository Created
+✓ Files Created
+✓ Content Added
+✓ Files Added to Staging Area
+✓ First Commit Completed
+
+
+NEXT STEP:
+================================================
+
+Create Feature-1 Branch
+
+Command:
+
+$ git checkout -b Feature-1
+
+================================================
