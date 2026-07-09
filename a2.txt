@@ -1,0 +1,83 @@
+                         GIT PRACTICAL TASK
+
+Task 1: Master Branch Setup
+--------------------------------
+
+1. Create a Git repository.
+
+2. Create and work on the Master branch.
+
+3. Create the required files:
+   - File1.txt
+   - File2.txt
+   - File3.txt
+   - File4.txt
+
+4. Add the required content to the files.
+
+5. Commit all changes in the Master branch.
+
+
+Task 2: Branch Creation and Collaboration
+------------------------------------------
+
+1. Create a new branch named Feature-1.
+
+2. Switch to the Feature-1 branch.
+
+3. Add and modify the required files in Feature-1.
+
+4. Commit the changes in the Feature-1 branch.
+
+
+5. Create another branch named Feature-2.
+
+6. Switch to the Feature-2 branch.
+
+7. Add and modify the required files in Feature-2.
+
+8. Commit the changes in the Feature-2 branch.
+
+
+Additional File Operations
+---------------------------
+
+1. Add content to a1.txt.
+
+2. Create an empty file y1.txt.
+
+3. Add content inside y2.txt.
+
+4. Add required content in a2.txt according to o3.txt.
+
+
+Git History and Remote Repository
+----------------------------------
+
+1. Check the commit history of all branches.
+
+2. Create and connect a remote repository.
+
+3. Push only the Feature-1 branch to the remote repository.
+
+4. Display the branches available:
+   - Local branches
+   - Remote branches
+
+
+Git Collaboration
+------------------
+
+Git collaboration allows multiple developers to work together
+on the same codebase using branches, commits, and remote
+repositories.
+
+Remote Repository
+-----------------
+
+A remote repository stores the project code online and allows
+team members to share, update, and collaborate on the project.
+
+
+
+
