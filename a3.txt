@@ -114,3 +114,69 @@ Git creates a merge commit because both branches contain different commits.
 | No merge commit is created               | A merge commit is created                   |
 | Git simply moves the branch pointer      | Git combines histories using a merge commit |
 | Simpler and faster                       | Used when branches have diverged            |
+
+
+=========================================================================================================
+
+
+# ==========================================
+#        THREE-WAY MERGING PRACTICAL
+# ==========================================
+
+# Step 1: Check current branch
+git branch
+
+# Step 2: Create a new branch named feature-2
+git branch feature-2
+
+# Step 3: Switch to feature-2
+git switch feature-2
+
+# Step 4: Make changes in feature-2
+echo "This is Feature-2 Branch" >> a2.txt
+
+# Step 5: Add and commit the changes
+git add .
+git commit -m "Updated a2.txt in feature-2"
+
+# Step 6: Switch back to master
+git switch master
+
+# Step 7: Make different changes in master
+echo "This is Master Branch" >> a3.txt
+
+# Step 8: Add and commit the changes
+git add .
+git commit -m "Updated a3.txt in master"
+
+# Step 9: Merge feature-2 into master
+git merge feature-2
+
+# Expected Output:
+# Merge made by the 'ort' strategy.
+
+# Step 10: Check commit history
+git log --oneline --graph
+
+# Expected Graph:
+#
+# *   <merge_commit> (HEAD -> master)
+# |\  
+# | * <feature-2_commit> Updated a2.txt in feature-2
+# * | <master_commit> Updated a3.txt in master
+# |/  
+# * <previous_commit>
+# * <initial_commit>
+
+# Step 11: Verify branches
+git branch
+
+# Expected Output:
+#   feature-1
+#   feature-2
+# * master
+#
+# NOTE:
+# A Three-Way Merge happens because BOTH branches
+# (master and feature-2) have different commits
+# before the merge. Git creates a NEW Merge Commit.
