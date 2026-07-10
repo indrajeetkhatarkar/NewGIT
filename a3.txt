@@ -1,0 +1,116 @@
+# Git Merging
+
+## What is Merging?
+
+Merging is the process of combining changes from one branch into another branch.
+
+There are two main types of merging:
+
+### 1. Two-Way Merging (Fast-Forward Merge)
+
+A fast-forward merge happens when the target branch has not changed since the feature branch was created. Git simply moves the branch pointer forward because there is no divergence.
+
+Example:
+
+```text
+A --- B --- C  (main)
+         \
+          D --- E  (feature-1)
+```
+
+After merging `feature-1` into `main`:
+
+```text
+A --- B --- C --- D --- E  (main, feature-1)
+```
+
+Since `main` had no new commits after creating `feature-1`, Git performs a **Fast-Forward Merge**.
+
+### Steps
+
+1. Create a feature branch from `main`.
+2. Switch to the feature branch.
+3. Make changes and commit them.
+4. Switch back to the `main` branch.
+5. Merge the feature branch into `main`.
+
+**Command Example**
+
+```bash
+git branch feature-1
+git switch feature-1
+
+# Make changes
+git add .
+git commit -m "Added new feature"
+
+git switch main
+git merge feature-1
+```
+
+**Note:** While merging, make sure you are on the branch that should receive the changes (usually `main`).
+
+---
+
+## 2. Three-Way Merging
+
+A three-way merge occurs when both the `main` branch and the feature branch have new commits after the feature branch was created. Since the branches have diverged, Git creates a new merge commit.
+
+Example:
+
+```text
+          D --- E  (feature-1)
+         /
+A --- B --- C
+         \
+          F --- G  (main)
+```
+
+After merging:
+
+```text
+          D --- E
+         /       \
+A --- B --- C ---- H  (main)
+         \
+          F --- G
+```
+
+Here, **H** is the merge commit created by Git.
+
+### Steps
+
+1. Create a feature branch.
+2. Commit changes in the feature branch.
+3. Switch back to `main`.
+4. Make different changes in `main` and commit them.
+5. Merge the feature branch into `main`.
+
+**Command Example**
+
+```bash
+git switch feature-1
+# Make changes
+git add .
+git commit -m "Feature changes"
+
+git switch main
+# Make different changes
+git add .
+git commit -m "Main branch changes"
+
+git merge feature-1
+```
+
+Git creates a merge commit because both branches contain different commits.
+
+---
+
+## Summary
+
+| Two-Way Merge (Fast-Forward)             | Three-Way Merge                             |
+| ---------------------------------------- | ------------------------------------------- |
+| No new commits in `main` after branching | Both branches have new commits              |
+| No merge commit is created               | A merge commit is created                   |
+| Git simply moves the branch pointer      | Git combines histories using a merge commit |
+| Simpler and faster                       | Used when branches have diverged            |
