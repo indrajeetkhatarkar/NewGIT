@@ -180,3 +180,26 @@ git branch
 # A Three-Way Merge happens because BOTH branches
 # (master and feature-2) have different commits
 # before the merge. Git creates a NEW Merge Commit.
+
+
+
+============================================================
+
+2 - Way Merging---
+
+Two way merging
+--> It is also called as fast forward merging
+Feature-1
+x1 x2 Feature
+x1.txt
+x2.txt
+c1 c2 c3 Master
+a1.txt
+a2.txt
+g3.txt
+Merge Feature branch
+with master
+In this we will be creating some commits in the master branch and then create
+a feature branch and do some commits in the feature branch and later merging
+feature branch with the master branch is called as two way merging.
+
